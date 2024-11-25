@@ -14,9 +14,9 @@ class ClothingCard extends StatelessWidget {
     return Material(
       color: Colors.white,
       child: InkWell(
-        borderRadius: BorderRadius.circular(7),
+        borderRadius: BorderRadius.circular(2),
         enableFeedback: true,
-        splashColor: Colors.red[50],
+        splashColor: Colors.white,
         onTap: () => {
           Navigator.pushNamed(context, "/details", arguments: Clothing(id: id, name: name, img: image))
         },
@@ -24,8 +24,8 @@ class ClothingCard extends StatelessWidget {
           margin: const EdgeInsets.all(5.0),
           padding: const EdgeInsets.all(5.0),
           decoration: BoxDecoration(
-              border: Border.all(color: Colors.red.withOpacity(0.8), width: 2),
-              borderRadius: BorderRadius.circular(10)
+              border: Border.all(color: Colors.black.withOpacity(0.8), width: 2),
+              borderRadius: BorderRadius.circular(2)
           ),
           child: ClothingCardData(image: image, name: name),
         ),
