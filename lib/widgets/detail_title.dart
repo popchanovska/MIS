@@ -7,12 +7,32 @@ class DetailTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Chip(backgroundColor: Colors.white,
-      label: Text("${name[0].toUpperCase()}${name.substring(1)}",
-        style: const TextStyle(fontSize: 24, color: Colors.black),
-      ),
-      avatar: CircleAvatar(
-        child: Text(id.toString()),
+    return Padding(
+      padding: const EdgeInsets.all(16.0), // Margin around the widget
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center, // Center the row
+        children: [
+          CircleAvatar(
+            radius: 24,
+            child: Text(
+              id.toString(),
+              style: const TextStyle(
+                fontSize: 32, // Match the title size
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+          ),
+          const SizedBox(width: 15),
+          Text(
+            "${name[0].toUpperCase()}${name.substring(1)}",
+            style: const TextStyle(
+              fontSize: 32, // Make the title bigger
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          ),
+        ],
       ),
     );
   }

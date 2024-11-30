@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:laboratory1/models/Clothing.dart';
 
 import 'card.dart';
-// import 'package:laboratory1/widgets/pokemon_card.dart';
 
 class ClothingGrid extends StatefulWidget {
   final List<Clothing> clothing;
@@ -22,8 +21,8 @@ class _ClothingGridState extends State<ClothingGrid> {
       semanticChildCount: 250,
       childAspectRatio: 200 / 244,
       physics: const BouncingScrollPhysics(),
-      children: widget.clothing.map((pokemon) =>
-          ClothingCard(id: pokemon.id, name: pokemon.name, image: pokemon.img),
+      children: widget.clothing.map((clothing) =>
+          ClothingCard(id: clothing.id, name: clothing.name, image: clothing.img, desc: clothing.desc, price: clothing.price),
       ).toList(),
     );
   }
